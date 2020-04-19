@@ -7,7 +7,9 @@ import { PostPaging } from '../components/PostPaging';
 import { PostShare } from '../components/PostShare';
 
 const BlogPost = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark;
+  const { site, markdownRemark } = data;
+  const { title: siteTitle } = site.siteMetadata;
+  const post = markdownRemark;
   const { title, date, tags, description } = post.frontmatter;
 
   return (
@@ -16,7 +18,7 @@ const BlogPost = ({ data, pageContext, location }) => {
         <PostHeader title={title} date={date} tags={tags} />
         <PostContent html={post.html} />
       </article>
-      <PostShare url={location.href} title={title} />
+      <PostShare url={location.href} title={title} siteTitle={siteTitle} />
       {(pageContext.next || pageContext.prev) && <PostPaging pageContext={pageContext} />}
     </Layout>
   );

@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme =>
   })
 );
 
-export const PostShare = ({ url, title }) => {
+export const PostShare = ({ url, title, siteTitle }) => {
   const classes = useStyles();
   return (
     <Grid container spacing={2} justify="center" className={classes.root}>
@@ -44,14 +44,14 @@ export const PostShare = ({ url, title }) => {
         </FacebookShareButton>
       </Grid>
       <Grid item>
-        <TwitterShareButton url={url}>
+        <TwitterShareButton url={url} title={`${title} | ${siteTitle}`}>
           <TwitterIcon size={40} round />
         </TwitterShareButton>
       </Grid>
       <Grid item>
         <Link
           className={classes.hagebu}
-          href={`http://b.hatena.ne.jp/add?mode=confirm&url=${url}&title=${title}`}
+          href={`http://b.hatena.ne.jp/add?mode=confirm&url=${url}&title=${title} | ${siteTitle}`}
           target="_blank"
           rel="nofollow"
         >

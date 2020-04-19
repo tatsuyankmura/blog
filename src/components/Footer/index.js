@@ -49,11 +49,11 @@ export const Footer = () => {
   return (
     <footer className={classes.root}>
       <Grid container justify="center" spacing={2}>
-        <Grid item>
+        {/* <Grid item>
           <a href={twitter} target="_blank" rel="noopener noreferrer" className={classes.link}>
             <TwitterIcon />
           </a>
-        </Grid>
+        </Grid> */}
         <Grid item>
           <a href={github} target="_blank" rel="noopener noreferrer" className={classes.link}>
             <GitHubIcon />

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `blog.tatsuyankmura`,
-    description: `フロントエンドっぽい人が作ったGatsby製のブログです。`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `フロントエンドエンジニアの端くれ。得意なことは手洗いうがい。`,
+    siteUrl: `https://blog.tatsuyankmura.com/`,
+    image: 'https://blog.tatsuyankmura.com/ogp.png',
     social: {
       twitter: 'https://twitter.com/tatsuya_nkmura',
       github: 'https://github.com/tatsuyankmura',
@@ -65,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `content/assets/gatsby-icon.png`,
+        icon: `./static/icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -81,7 +82,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://tatsuyankmura.com`,
+        siteUrl: `https://blog.tatsuyankmura.com/`,
       },
     },
   ],

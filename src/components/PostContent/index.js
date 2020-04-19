@@ -22,10 +22,14 @@ const Wrapper = styled.main`
     }
   }
   code {
-    border: ${props => `1px solid ${props.theme.palette.common.black}`};
-    background-color: #373949;
-    color: ${props => props.theme.palette.common.white};
+    background-color: #f6f8fa;
+    color: #24292e;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-weight: normal;
+  }
+  em {
+    font-weight: bold;
+    font-style: normal;
   }
 `;
 

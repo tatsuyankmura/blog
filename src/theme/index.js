@@ -7,7 +7,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontSize: 16,
+    fontSize: 18,
     fontFamily: [
       '-apple-system',
       'system-ui',
