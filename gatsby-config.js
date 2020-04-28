@@ -22,6 +22,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -85,5 +92,6 @@ module.exports = {
         siteUrl: `https://blog.tatsuyankmura.com/`,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 };
